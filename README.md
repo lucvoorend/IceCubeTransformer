@@ -49,11 +49,11 @@ Part I covers the theoretical background (Standard Model, Neutrino Physics, IceC
 
 The codebase is organized into three main directories, plus analysis notebooks and the thesis PDF:
 
-├── [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend].pdf # The full thesis document
-├── data_preparation/ # Scripts for data cleaning and preparation
-│ ├── cosmic_ray_cleaning.py
-│ ├── event_selection.py
-│ ├── pmt_fication.py
+├── [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend].pdf # The full thesis document  
+├── data_preparation/ # Scripts for data cleaning and preparation  
+│ ├── cosmic_ray_cleaning.py  
+│ ├── event_selection.py  
+│ ├── pmt_fication.py  
 │ └── ... # Other relevant preparation scripts
 ├── training_and_inference/ # Core scripts for the transformer model
 │ ├── model.py # Transformer model class definition
