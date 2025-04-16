@@ -5,23 +5,37 @@
 **Language**: Python 🐍
 ## 🧊 Overview
 
-This repository contains the complete codebase for my Master's thesis, focusing on the development and evaluation of a transformer-based machine learning model for the angular reconstruction of high-energy neutrino events detected by the IceCube Neutrino Observatory.
+Welcome! This repository hosts the complete codebase for my Master's thesis. The core focus is developing and evaluating a **transformer-based machine learning model** 🤖 for reconstructing the arrival direction (angular reconstruction) of high-energy neutrino events detected by the **IceCube Neutrino Observatory** 🧊 at the South Pole.
 
-**Motivation:**
-Over the last century, investigating elementary particles has significantly advanced physics, culminating in the Standard Model. Yet, many questions remain, particularly at the intersection of particle physics and astrophysics. Understanding high-energy processes in the universe, like those in active galactic nuclei, requires detailed knowledge of particle interactions. High-energy astrophysical particles detected on Earth reveal powerful cosmic accelerators, but their nature and location remain largely unknown.
+---
 
-Neutrinos, the elusive "ghost particles," are crucial messengers. They interact weakly, traversing the cosmos largely undisturbed, unlike high-energy γ-rays or cosmic rays. This makes them ideal probes for astronomical phenomena. Multi-messenger astronomy and the search for high-energy neutrino point sources motivated the construction of the IceCube Neutrino Observatory. IceCube has detected astrophysical neutrinos, linking them to distant blazars, active galactic nuclei, and potentially tidal disruption events, opening a new window into the high-energy universe.
+### 🌌 Motivation: Unveiling the High-Energy Universe
 
-**The Challenge:**
-Neutrino astronomy primarily targets muon neutrinos (νμ) due to their track-like signatures, which allow for better angular resolution – critical for identifying neutrino sources amidst background noise. Traditional likelihood-based methods achieve good resolution (≲ 1° at TeV, ≲ 0.2° at PeV) but can be computationally intensive. Machine learning, particularly Graph Neural Networks (GNNs), has shown promise for faster reconstruction but hasn't consistently outperformed traditional methods at higher energies. The 2023 IceCube Kaggle competition highlighted the potential of the transformer architecture.
+Physics has made incredible strides with the **Standard Model** ⚛️, but the universe still holds many mysteries, especially where particle physics meets astrophysics. Understanding extreme cosmic events, like those in active galactic nuclei, requires deciphering high-energy particle interactions. While we detect particles from powerful cosmic accelerators, their origins remain largely unknown.
 
-**This Project:**
-This thesis builds upon recent advancements, employing a novel **PMT-fication** approach (aggregating pulses at the photomultiplier tube level) to develop a transformer model for reconstructing muon neutrino tracks (100 GeV - 100 PeV). The research explores:
-* The impact of event selection, model size, training set size, and input data representation (PMT-fication) on transformer performance.
-* Fundamental aspects of transformer behavior on IceCube data.
-* Comparison of the final transformer model's angular resolution against state-of-the-art likelihood methods (SplineMPE).
+Enter the **neutrino** 👻 – the elusive "*ghost particle*". With almost no mass and no charge, neutrinos travel billions of light-years unimpeded, carrying direct information from their sources. Unlike γ-rays or cosmic rays, they aren't easily absorbed or deflected. This makes them perfect messengers for multi-messenger astronomy. The **IceCube Observatory** was built precisely for this, aiming to map the high-energy neutrino sky and has already linked neutrinos to distant cosmic sources.
 
-The goal is not only to present the findings but also to provide a foundation for future research by making the code accessible and reproducible.
+---
+
+### 🎯 The Challenge: Pinpointing Neutrino Sources
+
+Identifying specific neutrino sources requires *excellent angular resolution*. IceCube primarily uses muon neutrinos (νμ) for their track-like signatures.
+* **Traditional Methods:** Likelihood-based techniques achieve good resolution (e.g., ≲ 1° at TeV) but are computationally *slow*.
+* **Machine Learning:** GNNs showed promise for speed but haven't consistently beaten traditional methods at high energies (> GeV). The 2023 IceCube Kaggle competition shone a spotlight on the potential of **transformers**.
+
+---
+
+### ✨ This Project: Transformers & PMT-fication
+
+This thesis leverages these recent advancements, introducing a novel approach called **PMT-fication** (aggregating detector pulses at the Photomultiplier Tube level) to optimize data for a **transformer model**. The key goals were:
+
+* 🧠 Develop a transformer capable of reconstructing muon neutrino tracks (100 GeV - 100 PeV).
+* 🔬 Investigate how factors like *event selection*, *model size*, *training data size*, and *input representation* (PMT-fication) affect performance.
+* 📈 Compare the final model's angular resolution against the state-of-the-art **SplineMPE** likelihood method.
+
+Ultimately, this repository aims to share these findings and provide a **reproducible and extendable** codebase for future research in neutrino astronomy.
+
+---
 
 ## 📄 Thesis Document
 
