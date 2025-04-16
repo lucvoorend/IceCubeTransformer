@@ -2,7 +2,7 @@
 
 **Author**: Luc Voorend  
 **Thesis Date**: May 20, 2025  
-**Language**: Python 🐍
+**Code base language**: Python 🐍
 ## 🧊 Overview
 
 Welcome! This repository hosts the complete codebase for my Master's thesis. The core focus is developing and evaluating a **transformer-based machine learning model** for reconstructing the arrival direction (angular reconstruction) of high-energy neutrino events detected by the **IceCube Neutrino Observatory** at the South Pole.
