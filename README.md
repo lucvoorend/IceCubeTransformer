@@ -171,5 +171,8 @@ If you use this code or build upon the methods presented in this thesis, please 
   year         = {Year},
   url          = {[Link to Thesis or Repository]}
 }
+```
 
-## 📝 LicenseThis project is licensed under the [Your Chosen License - e.g., MIT License
+## 📝 License
+
+This project is licensed under the [Your Chosen License - e.g., MIT License
