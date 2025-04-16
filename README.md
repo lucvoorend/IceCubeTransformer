@@ -153,6 +153,11 @@ Key results and concepts are visualized in the thesis. Consider adding some key 
     ```
 
 *(Replace the `path/to/your/...` placeholders with the actual paths to your image files within the repository or hosted URLs.)*
+## 🙏 Acknowledgements
+
+* Part of the code related to [Specify the part of the code, e.g., 'the initial data loading'] was adapted from the work of [GitHub User 1 Name] ([Link to User 1 GitHub Profile]).
+* Inspiration for [Specify the aspect, e.g., 'the transformer architecture'] was drawn from [GitHub User 2 Name]'s repository ([Link to User 2 Repository or Profile]).
+* *Add any other acknowledgements here (supervisors, collaborators, funding sources, etc.).*
 
 ## 📜 Citation
 
@@ -166,4 +171,5 @@ If you use this code or build upon the methods presented in this thesis, please 
   year         = {Year},
   url          = {[Link to Thesis or Repository]}
 }
-📝 LicenseThis project is licensed under the [Your Chosen License - e.g., MIT License
+
+## 📝 LicenseThis project is licensed under the [Your Chosen License - e.g., MIT License
