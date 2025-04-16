@@ -54,19 +54,19 @@ The codebase is organized into three main directories, plus analysis notebooks a
 │ ├── cosmic_ray_cleaning.py  
 │ ├── event_selection.py  
 │ ├── pmt_fication.py  
-│ └── ... # Other relevant preparation scripts
-├── training_and_inference/ # Core scripts for the transformer model
-│ ├── model.py # Transformer model class definition
-│ ├── dataset.py # Custom Dataset class for IceCube data
-│ ├── dataloader.py # Dataloader implementation (using PMT-fication)
-│ ├── loss.py # Loss function(s) used for training
-│ ├── train.py # Script to train the model
-│ ├── inference.py # Script to run inference and evaluate the model
-│ └── ... # Config files, utility scripts, etc.
-├── analysis/ # Analysis notebooks and scripts
-│ └── analysis_plots.ipynb # Jupyter notebook to generate figures from the thesis
-├── requirements.txt # Python dependencies
-└── README.md # This file
+│ └── ... # Other relevant preparation scripts  
+├── training_and_inference/ # Core scripts for the transformer model  
+│ ├── model.py # Transformer model class definition  
+│ ├── dataset.py # Custom Dataset class for IceCube data  
+│ ├── dataloader.py # Dataloader implementation (using PMT-fication)  
+│ ├── loss.py # Loss function(s) used for training  
+│ ├── train.py # Script to train the model  
+│ ├── inference.py # Script to run inference and evaluate the model  
+│ └── ... # Config files, utility scripts, etc.  
+├── analysis/ # Analysis notebooks and scripts  
+│ └── analysis_plots.ipynb # Jupyter notebook to generate figures from the thesis  
+├── requirements.txt # Python dependencies  
+└── README.md # This file  
 
 * **`data_preparation/`**: Contains all scripts related to preparing the raw data for the model. This includes cosmic ray cleaning, event selection based on specific criteria, and the novel PMT-fication process.
 * **`training_and_inference/`**: This is the core directory. It holds the Python code defining the transformer architecture, the custom dataset and dataloader logic handling the PMT-fied data, loss functions, and the main scripts for training the model (`train.py`) and performing angular reconstruction on new data (`inference.py`).
