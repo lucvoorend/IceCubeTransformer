@@ -1,5 +1,4 @@
 # Master Thesis: Angular Reconstruction of High Energy Neutrino Events in IceCube using Machine Learning
-![IceCube Neutrino Observatory](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/IceCube_2010.jpg/800px-IceCube_2010.jpg)
 
 **Author**: Luc Voorend  
 **Thesis Date**: May 20, 2025  
