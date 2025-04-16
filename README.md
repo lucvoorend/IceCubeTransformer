@@ -47,7 +47,7 @@ Part I covers the theoretical background (Standard Model, Neutrino Physics, IceC
 
 ## 📁 Repository Structure
 
-The codebase is organized into three main directories, plus analysis notebooks and the thesis PDF:
+The codebase is organized into three main directories, plus the thesis PDF and requirements:
 
 ├── [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend].pdf # The full thesis document  
 ├── data_preparation/ # Scripts for data cleaning and preparation  
