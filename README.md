@@ -1,5 +1,9 @@
-# Master Thesis: Angular Reconstruction of High Energy Neutrino Events in IceCube using Transformers
+# Master Thesis: Angular Reconstruction of High Energy Neutrino Events in IceCube using Machine Learning
+![IceCube Neutrino Observatory](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/IceCube_2010.jpg/800px-IceCube_2010.jpg)
 
+**Author**: Luc Voorend  
+**Thesis Date**: May 20, 2025  
+**Language**: Python 🐍
 ## 🧊 Overview
 
 This repository contains the complete codebase for my Master's thesis, focusing on the development and evaluation of a transformer-based machine learning model for the angular reconstruction of high-energy neutrino events detected by the IceCube Neutrino Observatory.
