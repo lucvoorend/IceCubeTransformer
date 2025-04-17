@@ -1,4 +1,0 @@
-# Ignore all csv files and out when pushing to github
-*.csv
-*.out
-IceCube_transformer
