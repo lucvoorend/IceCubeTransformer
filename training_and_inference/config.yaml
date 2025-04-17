@@ -1,0 +1,67 @@
+# Configuration for Training the Neutrino Reconstruction Transformer Model
+
+# General run Settings
+run_name: "icecube_transformer_v1" # Name for logging and checkpointing
+checkpoint_path: "/groups/icecube/luc/Workspace/GraphNet/work/IceCube_transformer/lightning_logs/version_250/last.ckpt"            # Directory to save model checkpoints
+
+# Input Data Parameters
+input_data:
+  root_dir: "/lustre/hpc/project/icecube/HE_Nu_Aske_Oct2024/PMTfied_filtered/Snowstorm/CC_CRclean_MuonLike" # Path to the root directory of processed input data (e.g., PMT-fied data)
+  multi_dataset: false                   # Whether to combine multiple datasets
+  dataset_ids: [22011]                    # List of dataset IDs to use (e.g., [22011, 22012]), only allows one dataset if multi_dataset is false     
+  training_parts: [[1,2,3]]             # List of list of training parts to use (e.g., [1, 2, 3]) matching the dataset_ids
+  validation_parts: [[4]]                 # List of list of validation parts to use (e.g., [4]) matching the dataset_ids
+  reconstruction_target: "dir3vec"        # Target variable for reconstruction ('dir3vec', 'azimuth_zenith', etc.)
+  seq_dim: 256                            # Maximum sequence length of the input data
+  num_workers: 6                          # Number of worker processes for data loading
+  # Add other data-related parameters if needed (e.g., specific file names, pre-processing flags)
+
+# Model Parameters
+model_params:
+  feature_dim: 32                        # Dimension of the input features (e.g., PMT-fied data)
+  embedding_dim: 512                      # Dimension of the input embeddings
+  output_dim: 3                           # Dimension of the final output (e.g., 3 for direction vector, 2 for azimuth/zenith)
+  n_layers: 8                             # Number of transformer encoder layers
+  n_heads: 4                              # Number of attention heads in multi-head attention
+  dropout: 0.1                            # Dropout rate used in the model
+  # Add other model-specific hyperparameters (e.g., activation function, normalization type)
+
+# Training Parameters
+training_params:
+  device: "cuda:1"                        # Device to train on ('cuda:0', 'cuda:1', 'cpu')
+  batch_size: 64                          # Number of samples per batch
+  n_epochs: 100                           # Maximum number of training epochs
+  patience: 20                            # Number of epochs to wait for improvement before early stopping (-1 to disable)
+  loss_function: dir_3vec_loss            # Loss function to use 
+  learning_rate: 0.0005                   # Constant learning rate (base lr, might be overridden by scheduler)
+  optimizer: "AdamW"                      # Type of optimizer (supports 'Adam' or 'AdamW')
+  weight_decay: 0.0001                    # Weight decay (L2 penalty)
+  beta1: 0.9                              # Beta1 parameter for Adam optimizer
+  beta2: 0.999                            # Beta2 parameter for Adam optimizer
+  adam_eps: 1e-08                         # Epsilon parameter for Adam optimizer
+
+# Inference Parameters (only relevant if running inference.py)
+inference_params:
+  inference_root_dir: "/lustre/hpc/project/icecube/HE_Nu_Aske_Oct2024/PMTfied/Snowstorm" # Path to the root directory of processed input data for inference (unfiltered)
+  inference_dataset_id: [22011]            # Dataset ID for inference (e.g., 22011)
+  inference_parts: [4]                   # List of parts to use for inference (e.g., [5])
+  inference_output_path: "./"               # Directory to save inference results
+
+# Learning Rate Scheduler: OneCycleLR (Optional)
+use_one_cycle_lr: true                   # Whether to use the OneCycleLR scheduler
+one_cycle_lr_params:
+  max_lr: 0.0004                         # Maximum learning rate for OneCycleLR (can be same as base lr or higher)
+  pct_start: 0.1                         # Percentage of the cycle spent increasing the learning rate
+  anneal_strategy: 'cos'                 # Annealing strategy ('cos' or 'linear')
+  div_factor: 25.0                       # Factor by which the initial learning rate is lower than max_lr (max_lr / div_factor)
+  final_div_factor: 10000.0              # Factor by which the final learning rate is lower than the initial learning rate (initial_lr / final_div_factor)
+
+# Logging
+log_every_n_steps: 1                     # Frequency of logging metrics (in steps)
+use_tensorboard: true                    # Whether to use TensorBoard for logging
+tensorboard_params:
+  log_dir: "./lightning_logs"                        # Directory to save logs
+
+use_wandb: true                          # Whether to use Weights & Biases for logging
+wandb_params:
+  wandb_project: "icecube_transformer"   # Name of the Weights & Biases project
