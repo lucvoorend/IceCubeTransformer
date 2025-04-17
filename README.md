@@ -41,7 +41,7 @@ Ultimately, this repository aims to share these findings and provide a **reprodu
 
 The full thesis document, containing detailed theoretical background, methodology, analysis, results, and discussion, is available in the root directory of this repository:
 
-* **[Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend].pdf** (`[Link to Thesis PDF]`) 
+* **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend.pdf** (`[Link to Thesis PDF]`) 
 
 Part I covers the theoretical background (Standard Model, Neutrino Physics, IceCube, Machine Learning, Transformers, Traditional Reconstruction). Part II details the specific methods, data, model architecture, training, results, and conclusions of this research.
 
@@ -49,9 +49,9 @@ Part I covers the theoretical background (Standard Model, Neutrino Physics, IceC
 
 The codebase is organized into three main directories, plus the thesis PDF and requirements:
 
-├── [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend].pdf # The full thesis document  
+├── **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend.pdf** # The full thesis document  
 ├── data_preparation/ # Scripts for data cleaning and preparation  
-│ ├── cosmic_ray_cleaning.py  
+│ ├── CR_cleaning.py  
 │ ├── event_selection.py  
 │ ├── pmt_fication.py  
 │ └── ... # Other relevant preparation scripts  
