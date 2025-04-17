@@ -55,8 +55,8 @@ The codebase is organized into three main directories, plus the thesis PDF and r
 │ ├── event_selection.py  
 │ ├── pmt_fication.py  
 │ └── ... # Other relevant preparation scripts  
-├── training_and_inference/ # Core scripts for the transformer model 
-│ ├── src/
+├── training_and_inference/ # Core scripts for the transformer model  
+│ ├── src/  
 │ │ ├── model.py # Transformer model class definition  
 │ │ ├── dataset.py # Custom Dataset class for IceCube data  
 │ │ ├── dataloader.py # Dataloader implementation (using PMT-fication)  
@@ -64,7 +64,7 @@ The codebase is organized into three main directories, plus the thesis PDF and r
 │ │ ├── utils.py # Assertion functions for config file  
 │ ├── train.py # Script to train the model  
 │ ├── inference.py # Script to run inference and evaluate the model  
-│ └── config.yaml # Config file controlling settings for training and inference 
+│ └── config.yaml # Config file controlling settings for training and inference  
 ├── analysis/ # Analysis notebooks and scripts  
 │ └── analysis.ipynb # Jupyter notebook to generate figures from the thesis  
 ├── requirements.txt # Python dependencies  
