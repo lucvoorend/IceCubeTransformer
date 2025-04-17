@@ -55,16 +55,18 @@ The codebase is organized into three main directories, plus the thesis PDF and r
 │ ├── event_selection.py  
 │ ├── pmt_fication.py  
 │ └── ... # Other relevant preparation scripts  
-├── training_and_inference/ # Core scripts for the transformer model  
-│ ├── model.py # Transformer model class definition  
-│ ├── dataset.py # Custom Dataset class for IceCube data  
-│ ├── dataloader.py # Dataloader implementation (using PMT-fication)  
-│ ├── loss.py # Loss function(s) used for training  
+├── training_and_inference/ # Core scripts for the transformer model 
+│ ├── src/
+│ │ ├── model.py # Transformer model class definition  
+│ │ ├── dataset.py # Custom Dataset class for IceCube data  
+│ │ ├── dataloader.py # Dataloader implementation (using PMT-fication)  
+│ │ ├── loss.py # Loss function(s) used for training  
+│ │ ├── utils.py # Assertion functions for config file
 │ ├── train.py # Script to train the model  
 │ ├── inference.py # Script to run inference and evaluate the model  
-│ └── ... # Config files, utility scripts, etc.  
+│ └── config.yaml # Config file controlling settings for training and inference 
 ├── analysis/ # Analysis notebooks and scripts  
-│ └── analysis_plots.ipynb # Jupyter notebook to generate figures from the thesis  
+│ └── analysis.ipynb # Jupyter notebook to generate figures from the thesis  
 ├── requirements.txt # Python dependencies  
 └── README.md # This file  
 
@@ -153,9 +155,9 @@ Feel free to fork this repository and build upon this work. Contributions and su
 
 ## 🙏 Acknowledgements
 
-* Part of the code related to [Specify the part of the code, e.g., 'the initial data loading'] was adapted from the work of [GitHub User 1 Name] ([Link to User 1 GitHub Profile]).
-* Inspiration for [Specify the aspect, e.g., 'the transformer architecture'] was drawn from [GitHub User 2 Name]'s repository ([Link to User 2 Repository or Profile]).
-* *Add any other acknowledgements here (supervisors, collaborators, funding sources, etc.).*
+* The code related to PMT-fication and event selection was written by [Cyan Jo](https://github.com/KUcyans).
+* The CR_cleaning code has been written by [Johann Nikolaides](https://github.com/jn1707).
+* Special thanks to [Troels Petersen](https://github.com/troelspetersen), [Inar Timiryasov](https://github.com/timinar) and [Jean-Loup Tastet](https://github.com/JLTastet) for supervising the project.
 
 ## 📜 Citation
 
