@@ -61,7 +61,7 @@ The codebase is organized into three main directories, plus the thesis PDF and r
 │ │ ├── dataset.py # Custom Dataset class for IceCube data  
 │ │ ├── dataloader.py # Dataloader implementation (using PMT-fication)  
 │ │ ├── loss.py # Loss function(s) used for training  
-│ │ ├── utils.py # Assertion functions for config file
+│ │ ├── utils.py # Assertion functions for config file  
 │ ├── train.py # Script to train the model  
 │ ├── inference.py # Script to run inference and evaluate the model  
 │ └── config.yaml # Config file controlling settings for training and inference 
