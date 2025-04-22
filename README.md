@@ -169,7 +169,7 @@ If you use this code or build upon the methods presented in this thesis, please 
   title        = {Angular reconstruction of high energy neutrinos using machine learning},
   school       = {University of Copenhagen},
   year         = {2025},
-  url          = {https://github.com/lucvoorend/IceCube_master_thesis}
+  url          = {https://github.com/lucvoorend/IceCubeTransformer}
 }
 ```
 
