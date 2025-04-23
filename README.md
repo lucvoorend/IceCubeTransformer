@@ -175,4 +175,17 @@ If you use this code or build upon the methods presented in this thesis, please 
 
 ## 📝 License
 
-This project is licensed under the [Your Chosen License - e.g., MIT License
+This repository contains different types of content under different licenses:
+
+### Code
+
+All source code files (typically files with extensions like `.py` and `.yaml`) are licensed under the **MIT License**. You can find the full license text in the [LICENSE](LICENSE) file. This means you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the code, provided the original copyright notice and license text are included.
+
+### Thesis Document
+
+The PDF document located at `[path/to/your/thesis.pdf]` contains the author's thesis.
+**Copyright © 2025 L.H. Voorend. All Rights Reserved.**
+
+This document is provided for viewing and academic citation purposes only.
+* **You MAY:** View the document, cite the document according to academic standards.
+* **You MAY NOT:** Modify the document, distribute copies of the document, host the document elsewhere, or use it for commercial purposes without explicit written permission from the author.
