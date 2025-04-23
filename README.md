@@ -183,8 +183,9 @@ All source code files (typically files with extensions like `.py` and `.yaml`) a
 
 ### Thesis Document
 
-The PDF document located at `[path/to/your/thesis.pdf]` contains the author's thesis.
-**Copyright © 2025 L.H. Voorend. All Rights Reserved.**
+The PDF document located at `[path/to/your/thesis.pdf]` contains the author's thesis.  
+**Copyright © 2025 L.H. Voorend.  
+All Rights Reserved.**
 
 This document is provided for viewing and academic citation purposes only.
 * **You MAY:** View the document, cite the document according to academic standards.
