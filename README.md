@@ -102,7 +102,7 @@ Follow these steps to set up the environment and run the code.
 
 1.  **Data Preparation:**
     * If not yet processed, apply the [IcePACK](https://github.com/KUcyans/IcePack/tree/main) toolkit for PMT-fication of the input data.
-    * Follow the readme of the directory for specific instructions.
+    * Follow the `readme` of the directory for specific instructions.
 
 2.  **Training:**
     * Configure the training parameters in `config.yaml`.
