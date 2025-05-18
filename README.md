@@ -27,7 +27,7 @@ Identifying specific neutrino sources requires *excellent angular resolution*. I
 
 ### ✨ This Project: Transformers & PMT-fication
 
-This thesis leverages these recent advancements, introducing a novel approach called **PMT-fication** (aggregating detector pulses at the Photomultiplier Tube level) to optimize data for a **transformer model**. The key goals were:
+This thesis leverages these recent advancements, introducing a novel approach called **PMT-fication** (aggregating detector pulses at the Photomultiplier Tube level) to optimize data for a **transformer model**. The code for PMT-fication is released as a separate toolkit [IcePACK](https://github.com/KUcyans/IcePack/tree/main) The key goals of the thesis were:
 
 * 🧠 Develop a transformer capable of reconstructing muon neutrino tracks (100 GeV - 100 PeV).
 * 🔬 Investigate how factors like *event selection*, *model size*, *training data size*, and *input representation* (PMT-fication) affect performance.
@@ -41,20 +41,17 @@ Ultimately, this repository aims to share these findings and provide a **reprodu
 
 The full thesis document, containing detailed theoretical background, methodology, analysis, results, and discussion, is available in the root directory of this repository:
 
-* **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend.pdf** (`[Link to Thesis PDF]`) 
+* **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf** (`[Link to Thesis PDF]`) 
 
 Part I covers the theoretical background (Standard Model, Neutrino Physics, IceCube, Machine Learning, Transformers, Traditional Reconstruction). Part II details the specific methods, data, model architecture, training, results, and conclusions of this research.
 
 ## 📁 Repository Structure
 
-The codebase is organized into three main directories, plus the thesis PDF and requirements:
+This codebase is organized into three main directories, plus the thesis PDF and requirements:
 
-├── **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_Luc_Voorend.pdf** # The full thesis document  
+├── **Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf** # The full thesis document  
 ├── data_preparation/ # Scripts for data cleaning and preparation  
-│ ├── CR_cleaning.py  
-│ ├── event_selection.py  
-│ ├── pmt_fication.py  
-│ └── ... # Other relevant preparation scripts  
+│ └── CR_cleaning.py   
 ├── training_and_inference/ # Core scripts for the transformer model  
 │ ├── src/  
 │ │ ├── model.py # Transformer model class definition  
@@ -65,12 +62,12 @@ The codebase is organized into three main directories, plus the thesis PDF and r
 │ ├── train.py # Script to train the model  
 │ ├── inference.py # Script to run inference and evaluate the model  
 │ └── config.yaml # Config file controlling settings for training and inference  
-├── analysis/ # Analysis notebooks and scripts  
+├── analysis/ # Analysis notebook
 │ └── analysis.ipynb # Jupyter notebook to generate figures from the thesis  
 ├── requirements.txt # Python dependencies  
 └── README.md # This file  
 
-* **`data_preparation/`**: Contains all scripts related to preparing the raw data for the model. This includes cosmic ray cleaning, event selection based on specific criteria, and the novel PMT-fication process.
+* **`data_preparation/`**: Contains all scripts related to selecting cosmic ray cleaned events from i3 files.
 * **`training_and_inference/`**: This is the core directory. It holds the Python code defining the transformer architecture, the custom dataset and dataloader logic handling the PMT-fied data, loss functions, and the main scripts for training the model (`train.py`) and performing angular reconstruction on new data (`inference.py`).
 * **`analysis/`**: Includes Jupyter notebooks (`.ipynb`) to generate the plots, figures, and statistical analyses presented in the thesis.
 
@@ -104,16 +101,11 @@ Follow these steps to set up the environment and run the code.
 ### Running the Code
 
 1.  **Data Preparation:**
-    * Place the necessary raw input data in the designated location (specify where, e.g., a `data/raw/` directory).
-    * Run the scripts in the `data_preparation/` directory in the required order (e.g., cleaning -> selection -> PMT-fication). Refer to the thesis (Part II) or script comments for specific instructions.
-    ```bash
-    # Example commands (adjust paths and arguments as needed)
-    python data_preparation/cosmic_ray_cleaning.py --input data/raw/ --output data/cleaned/
-    python data_preparation/event_selection.py --input data/cleaned/ --output data/selected/
-    python data_preparation/pmt_fication.py --input data/selected/ --output data/pmt-fied/
-    ```
+    * If not yet processed, apply the [IcePACK](https://github.com/KUcyans/IcePack/tree/main) toolkit for PMT-fication of the input data.
+    * Follow the readme of the directory for specific instructions.
+
 2.  **Training:**
-    * Configure the training parameters in `config.json`.
+    * Configure the training parameters in `config.yaml`.
     * Run the training script `train.py`
     ```bash
     # For no hang up run on a Unix/Linux system, use:
@@ -121,8 +113,9 @@ Follow these steps to set up the environment and run the code.
     ```
 3.  **Inference & Evaluation:**
     * Use the trained model to perform angular reconstruction on a test dataset.
+    * Add trained model details to `config.yaml` and select data files for inference
     ```bash
-    python training_and_inference/inference.py --data_path data/pmt-fied-test/ --model_path models/final_transformer.pth --output_path results/
+    python training_and_inference/inference.py
     ```
 4.  **Analysis:**
     * Open and run the Jupyter notebook(s) in the `analysis/` directory to reproduce the plots and figures from the thesis.
@@ -136,7 +129,7 @@ Follow these steps to set up the environment and run the code.
 
 This repository aims to ensure the reproducibility of the results presented in the thesis.
 * The `requirements.txt` file lists the necessary package versions.
-* The scripts in `data_preparation/` allow for recreating the exact data processing steps.
+* The scripts in `data_preparation/` allow for recreating the exact data processing steps, combined with the IcePACK library.
 * The `training_and_inference/` scripts, along with the training configurations, enable retraining or re-evaluating the model.
 * The `analysis/analysis_plots.ipynb` notebook uses the output from the inference step to generate the key figures, allowing for direct comparison with the thesis results.
 
@@ -155,7 +148,7 @@ Feel free to fork this repository and build upon this work. Contributions and su
 
 ## 🙏 Acknowledgements
 
-* The code related to PMT-fication and event selection was written by [Cyan Jo](https://github.com/KUcyans).
+* The code related to PMT-fication and event selection was largely written by [Cyan Jo](https://github.com/KUcyans).
 * The CR_cleaning code has been written by [Johann Nikolaides](https://github.com/jn1707).
 * Special thanks to [Troels Petersen](https://github.com/troelspetersen), [Inar Timiryasov](https://github.com/timinar) and [Jean-Loup Tastet](https://github.com/JLTastet) for supervising the project.
 
