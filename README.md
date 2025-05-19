@@ -41,7 +41,7 @@ Ultimately, this repository aims to share these findings and provide a **reprodu
 
 The full thesis document, containing detailed theoretical background, methodology, analysis, results, and discussion, is available in the root directory of this repository:
 
-* **[Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf]** (https://github.com/lucvoorend/IceCubeTransformer/blob/master/Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf) 
+* [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf](https://github.com/lucvoorend/IceCubeTransformer/blob/master/Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf) 
 
 Part I covers the theoretical background (Standard Model, Neutrino Physics, IceCube, Machine Learning, Transformers, Traditional Reconstruction). Part II details the specific methods, data, model architecture, training, results, and conclusions of this research.
 
@@ -176,7 +176,7 @@ All source code files (typically files with extensions like `.py` and `.yaml`) a
 
 ### Thesis Document
 
-The PDF document located at `[Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf](https://github.com/lucvoorend/IceCubeTransformer/blob/master/Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf)` contains the author's thesis.  
+The PDF document located at [Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf](https://github.com/lucvoorend/IceCubeTransformer/blob/master/Angular_reconstruction_of_high_energy_neutrinos_using_machine_learning_LucVoorend.pdf) contains the author's thesis.  
 **Copyright © 2025 L.H. Voorend.  
 All Rights Reserved.**
 
